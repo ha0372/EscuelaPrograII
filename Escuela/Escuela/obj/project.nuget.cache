@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kt9l4sh5A+rptVpGgT4rfAXDVGBU1dtfG25zPU5nZTP9Hbj4XXMkELvuExfmKoUOH+pmBQIyVvaNppxnt9i8nA==",
+  "dgSpecHash": "2JBoMgAL2V/Ii0vhZNrgkWXfkmM5eVzTqjwUWOcpYd4SHix3XLhtX46P3Nxz4ln69CuJ3tnFI/9Ui1rmOEhcFw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Crob01\\Desktop\\Programacion II\\Escuela\\Escuela\\Escuela.csproj",
+  "projectFilePath": "C:\\Users\\Crob01\\Documents\\GitHub\\EscuelaPrograII\\Escuela\\Escuela\\Escuela.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Crob01\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Crob01\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

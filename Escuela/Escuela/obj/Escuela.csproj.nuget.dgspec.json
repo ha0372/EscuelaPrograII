@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Crob01\\Desktop\\Programacion II\\Escuela\\Escuela\\Escuela.csproj": {}
+    "C:\\Users\\Crob01\\Documents\\GitHub\\EscuelaPrograII\\Escuela\\Escuela\\Escuela.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Crob01\\Desktop\\Programacion II\\Escuela\\Escuela\\Escuela.csproj": {
+    "C:\\Users\\Crob01\\Documents\\GitHub\\EscuelaPrograII\\Escuela\\Escuela\\Escuela.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Crob01\\Desktop\\Programacion II\\Escuela\\Escuela\\Escuela.csproj",
+        "projectUniqueName": "C:\\Users\\Crob01\\Documents\\GitHub\\EscuelaPrograII\\Escuela\\Escuela\\Escuela.csproj",
         "projectName": "Escuela",
-        "projectPath": "C:\\Users\\Crob01\\Desktop\\Programacion II\\Escuela\\Escuela\\Escuela.csproj",
+        "projectPath": "C:\\Users\\Crob01\\Documents\\GitHub\\EscuelaPrograII\\Escuela\\Escuela\\Escuela.csproj",
         "packagesPath": "C:\\Users\\Crob01\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Crob01\\Desktop\\Programacion II\\Escuela\\Escuela\\obj\\",
+        "outputPath": "C:\\Users\\Crob01\\Documents\\GitHub\\EscuelaPrograII\\Escuela\\Escuela\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Crob01\\AppData\\Roaming\\NuGet\\NuGet.Config",
