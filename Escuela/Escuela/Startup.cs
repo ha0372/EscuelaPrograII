@@ -1,4 +1,6 @@
 using Escuela.Data;
+using Escuela.Repositorio;
+using Escuela.Servicio;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +29,8 @@ namespace Escuela
         {
             services.AddControllersWithViews();
             services.AddDbContext<ApplicationDbContext>(optios => optios.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddTransient<ICourse, CourseRepositore>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
