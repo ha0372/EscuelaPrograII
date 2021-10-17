@@ -1,45 +1,65 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Insert</title>
+
+    <style>
+        .contenedorp {
+            position: absolute;
+            height: 400px;
+            width: 600px;
+            background: #00cc66;
+            text-align: center;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%,-50%);
+            border-radius: 30px;
+        }
+
+        .cardbody {
+            background: white;
+            height: 90%;
+            padding: 20px;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+
+        body {
+            background-image: url(https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials.jpg);
+            background-size: cover;
+        }
+
+        .estilotexto {
+            margin-top: 10%;
+        }
+
+            .estilotexto input {
+                width: 70%;
+                margin-bottom: 40px;
+            }
+    </style>
 </head>
 <body>
-    <h1>Insert</h1>
-    <br />
-
-
-    @using (Html.BeginForm("Insert", "Insert", FormMethod.Post))
+    @using (Html.BeginForm("Insert", "Home", FormMethod.Post))
     {
+        <div class="contenedorp">
+            <div class="titulo">
+                <h1>INSERT COURSE</h1>
+            </div>
+            <div class="cardbody">
+                <div class="estilotexto">
+                    <label for="titulo">TITLE</label> <br>
+                    <input type="text" name="titulo" id=""><br>
+                    <label for="creditos">CREDITS</label><br>
+                    <input type="password" name="creditos" required><br>
+                    <input type="submit" value="SAVE">
+                </div>
+            </div>
 
-
-        <label for="titulo">Titulo</label>
-        <br>
-        <input type="text" name="titulo" required>
-        <br>
-
-
-
-        <label for="creditos">Creditos</label>
-        <br>
-        <input type="number" name="creditos" required>
-        <br>
-
-        @*<input type="submit" class="btn btn-success" />*@
-        <button> <i class="fas fa-save"></i> Guardar </button>
-
-
-
+        </div>
     }
-
-
-
-
-
-</body>
+    </body>
 </html>
 
 

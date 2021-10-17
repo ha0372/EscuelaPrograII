@@ -22,6 +22,22 @@ namespace Escuela.Controllers
             _logger = logger;
         }
 
+        public IActionResult Index()
+        {
+            //Course course = new Course();
+            //course.Title = "Poo";
+            //course.Credits = 100;
+
+            //icourse.Insertar(course);
+
+            return View();
+        }
+
+/**************************************************************************************************************************************************/
+        public IActionResult Insert()
+        {
+            return View();
+        }
         [HttpPost]
         public IActionResult Insert(string titulo, int creditos)
         {
@@ -35,24 +51,14 @@ namespace Escuela.Controllers
 
             return View();
         }
-
-        public IActionResult Index()
-        {
-            //Course course = new Course();
-            //course.Title = "Poo";
-            //course.Credits = 100;
-
-            //icourse.Insertar(course);
-
-            return View();
-        }
+/*****************************************************************************************************************************************************/
         public IActionResult GetAll()
         {
             var FormatoJson = icourse.ListarCursos();
 
             return Json(new { data = FormatoJson });
         }
-
+/***************************************************************************************************************************************************/
         public IActionResult Privacy()
         {
             return View();
