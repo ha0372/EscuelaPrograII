@@ -145,3 +145,4 @@ C:\Users\Crob01\Documents\GitHub\EscuelaPrograII\Escuela\Escuela\bin\Debug\net5.
 C:\Users\Crob01\Documents\GitHub\EscuelaPrograII\Escuela\Escuela\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\Crob01\Documents\GitHub\EscuelaPrograII\Escuela\Escuela\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\Crob01\Documents\GitHub\EscuelaPrograII\Escuela\Escuela\obj\Debug\net5.0\Razor\Views\Home\Insert.cshtml.g.cs
+C:\Users\Crob01\Documents\GitHub\EscuelaPrograII\Escuela\Escuela\obj\Debug\net5.0\Razor\Views\Home\ComboBox.cshtml.g.cs

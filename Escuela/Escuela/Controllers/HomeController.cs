@@ -2,6 +2,7 @@
 using Escuela.Models;
 using Escuela.Servicio;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -15,20 +16,51 @@ namespace Escuela.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private ICourse icourse;
+        private IRollements irollements;
 
-        public HomeController(ILogger<HomeController> logger, ICourse icourse)
+        public HomeController(ILogger<HomeController> logger, ICourse icourse, IRollements irollements)
         {
             this.icourse = icourse;
+            this.irollements = irollements;
             _logger = logger;
         }
 
         public IActionResult Index()
         {
+            var listado = irollements.UnionDeTablas();
+            //_ = listado;
+
             //Course course = new Course();
             //course.Title = "Poo";
             //course.Credits = 100;
 
             //icourse.Insertar(course);
+
+            return View(listado);
+        }
+
+/***************************************************************************************************************************************************/
+        public IActionResult ComboBox()
+        {
+
+            var informationOftheCombo = icourse.ListarCursos();
+            List<SelectListItem> list = new List<SelectListItem>();
+
+            foreach (var  iterarInfo in informationOftheCombo)
+            {
+                list.Add(
+                    new SelectListItem
+                    {
+                        Text = iterarInfo.Title,
+                        Value = Convert.ToString(iterarInfo.CouserId)
+                    }
+
+
+
+                    );
+
+                ViewBag.estado = list;
+            }
 
             return View();
         }

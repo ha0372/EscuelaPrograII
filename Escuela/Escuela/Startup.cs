@@ -31,6 +31,7 @@ namespace Escuela
             services.AddDbContext<ApplicationDbContext>(optios => optios.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddTransient<ICourse, CourseRepositore>();
+            services.AddTransient<IRollements, EnrollemntRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
