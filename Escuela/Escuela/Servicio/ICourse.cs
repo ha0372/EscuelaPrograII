@@ -14,7 +14,6 @@ namespace Escuela.Servicio
         void Delete(Course c);
 
         void Update(Course c);
-
         //List<Course> ListarCursos();
 
         ICollection<Course> ListarCursos();

@@ -1,0 +1,49 @@
+﻿@model List<Escuela.Dominio.Enrollment>
+@{
+    ViewData["Title"] = "InnerJ";
+}
+
+<h1>InnerJ</h1>
+
+<table id="mitabla" class="table table-dark table-striped">
+
+    <thead>
+        <tr>
+            <th>Enrollemnt ID</th>
+            <th>Student ID</th>
+            <th>Course ID</th>
+            <th>LastName</th>
+            <th>FirstMidName</th>
+            <th>Curso</th>
+        </tr>
+    </thead>
+
+
+    <tbody>
+        @foreach (var iteracion in Model)
+        {
+            <tr>
+                <td>@iteracion.EnrollmentId</td>
+                <td>@iteracion.StudentId</td>
+                <td>@iteracion.Course.CouserId</td>
+                <td>@iteracion.Student.LastName</td>
+                <td>@iteracion.Student.FirstMiName</td>
+                <td>@iteracion.Course.Title</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+@section scripts{
+
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var tabla = $('#mitabla').DataTable();
+        });
+
+
+    </script>
+
+}

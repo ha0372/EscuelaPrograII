@@ -27,7 +27,7 @@ namespace Escuela.Controllers
 
         public IActionResult Index()
         {
-            var listado = irollements.UnionDeTablas();
+            
             //_ = listado;
 
             //Course course = new Course();
@@ -35,6 +35,32 @@ namespace Escuela.Controllers
             //course.Credits = 100;
 
             //icourse.Insertar(course);
+
+            return View();
+        }
+/****************************************************************************************************************************************************/
+        public IActionResult GetAllForJoinJsonLinq()
+        {
+
+            var listado = irollements.UnionDeTablas();
+
+            var combinacionArreglos = (from union in listado
+                                       select new
+                                       {
+                                           union.Course.Title,
+                                           union.Student.LastName,
+                                           union.Student.FirstMiName,
+                                           union.grade
+                                       }).ToList();
+
+            return Json(new {combinacionArreglos});
+        }
+
+
+/***************************************************************************************************************************************************/
+        public IActionResult InnerJ()
+        {
+            var listado = irollements.UnionDeTablas();
 
             return View(listado);
         }
