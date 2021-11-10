@@ -147,3 +147,10 @@ C:\Users\Crob01\Documents\GitHub\EscuelaPrograII\Escuela\Escuela\bin\Debug\net5.
 C:\Users\Crob01\Documents\GitHub\EscuelaPrograII\Escuela\Escuela\obj\Debug\net5.0\Razor\Views\Home\Insert.cshtml.g.cs
 C:\Users\Crob01\Documents\GitHub\EscuelaPrograII\Escuela\Escuela\obj\Debug\net5.0\Razor\Views\Home\ComboBox.cshtml.g.cs
 C:\Users\Crob01\Documents\GitHub\EscuelaPrograII\Escuela\Escuela\obj\Debug\net5.0\Razor\Views\Home\InnerJ.cshtml.g.cs
+C:\Users\Crob01\Documents\GitHub\EscuelaPrograII\Escuela\Escuela\obj\Debug\net5.0\Razor\Views\Students\Index.cshtml.g.cs
+C:\Users\Crob01\Documents\GitHub\EscuelaPrograII\Escuela\Escuela\obj\Debug\net5.0\Razor\Views\Students\DataEstudents.cshtml.g.cs
+C:\Users\Crob01\Documents\GitHub\EscuelaPrograII\Escuela\Escuela\obj\Debug\net5.0\Razor\Views\Course\Index.cshtml.g.cs
+C:\Users\Crob01\Documents\GitHub\EscuelaPrograII\Escuela\Escuela\obj\Debug\net5.0\Razor\Views\Course\DataCourses.cshtml.g.cs
+C:\Users\Crob01\Documents\GitHub\EscuelaPrograII\Escuela\Escuela\obj\Debug\net5.0\Razor\Views\Enrollment\Index.cshtml.g.cs
+C:\Users\Crob01\Documents\GitHub\EscuelaPrograII\Escuela\Escuela\obj\Debug\net5.0\Razor\Views\Enrollment\DataEnrollment.cshtml.g.cs
+C:\Users\Crob01\Documents\GitHub\EscuelaPrograII\Escuela\Escuela\obj\Debug\net5.0\Razor\Views\Home\Parcial.cshtml.g.cs

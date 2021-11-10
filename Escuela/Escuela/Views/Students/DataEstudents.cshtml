@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "DataEstudents";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center">Estudents Data</h1>
+
+@using (Html.BeginForm("Succes", "Students", FormMethod.Post))
+{
+
+    <label for="LastName"> Last Name Student </label>
+    <br>
+    <input type="text" name="LastName" value="@ViewBag.lastName" required>
+    <br>
+
+    <label for="FirstMiName">Fisrts Name Student</label>
+    <br>
+    <input type="text" name="FirstMiName" value="@ViewBag.name" required>
+    <br>
+
+    <label for="EnrollmentsDate">Enrollments Date</label>
+    <br>
+    <input type="text" name="EnrollmentsDate" value="@ViewBag.date" required readonly>
+    <br />
+    @*<label for="StudentId">ID</label>
+    <br />*@
+    <input type="hidden" name="StudentId" value="@ViewBag.id" />
+    <br>
+    <br />
+    <input type="submit" value="SAVE" class="btn btn-success" />
+
+
+}
+

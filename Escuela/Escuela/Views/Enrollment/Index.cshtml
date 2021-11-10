@@ -1,0 +1,54 @@
+﻿@model List<Escuela.Dominio.Enrollment>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center">Enrollments</h1>
+<br />
+
+<div>
+    @Html.ActionLink("Insert", "DataEnrollment", new { EnrollmentId = 0 }, new { @class = "btn btn-primary" })
+</div>
+<br />
+<br />
+<table id="inner" class="table table-striped">
+
+    <thead>
+        <tr>
+
+            <th>Course</th>
+            <th>LastName</th>
+            <th>FirstMidName</th>
+            <th>Grade</th>
+        </tr>
+    </thead>
+
+
+    <tbody>
+        @foreach (var iteracion in Model)
+        {
+            <tr>
+                <td>@iteracion.Course.Title</td>
+                <td>@iteracion.Student.LastName</td>
+                <td>@iteracion.Student.FirstMiName</td>
+                <td>@iteracion.grade</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+@*@section scripts{
+
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var tabla = $('#inner').DataTable();
+        });
+
+
+    </script>
+
+}*@
+

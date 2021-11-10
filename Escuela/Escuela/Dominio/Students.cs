@@ -19,6 +19,8 @@ namespace Escuela.Dominio
 
         public DateTime EnrollmentsDate { get; set; }
 
+        public bool stateStudent { get; set; }
+
         public ICollection<Enrollment> Enrollments { get; set; }
 
 

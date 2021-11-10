@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Escuela.Servicio
 {
-    public interface IRollements
+    public interface IStudent
     {
-        List<Enrollment> ListOfEnrollment();
+        List<Students> ListOfStudent();
 
-        void Insert(Enrollment enrollment);
+        void Insert(Students students);
 
-        //void Update(Enrollment enrollment);
+        void Update(Students students);
     }
 }

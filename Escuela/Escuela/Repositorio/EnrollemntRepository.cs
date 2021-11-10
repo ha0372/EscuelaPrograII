@@ -18,11 +18,18 @@ namespace Escuela.Repositorio
             this.bd = bd;
         }
 
-        public List<Enrollment> UnionDeTablas()
+        public void Insert(Enrollment enrollment)
+        {
+            bd.Add(enrollment);
+            bd.SaveChanges();
+        }
+
+        public List<Enrollment> ListOfEnrollment()
         {
             var union = bd.Enrollments.
                 Include(e => e.Student).
                 Include(c=>c.Course).
+                Where(x => x.Student.stateStudent == true && x.Course.stateCourse == true).
                 ToList();
 
             return union;

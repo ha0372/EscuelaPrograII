@@ -17,11 +17,13 @@ namespace Escuela.Controllers
         private readonly ILogger<HomeController> _logger;
         private ICourse icourse;
         private IRollements irollements;
+        private IStudent istudent;
 
-        public HomeController(ILogger<HomeController> logger, ICourse icourse, IRollements irollements)
+        public HomeController(ILogger<HomeController> logger, ICourse icourse, IRollements irollements, IStudent istudent)
         {
             this.icourse = icourse;
             this.irollements = irollements;
+            this.istudent = istudent;
             _logger = logger;
         }
 
@@ -42,7 +44,7 @@ namespace Escuela.Controllers
         public IActionResult GetAllForJoinJsonLinq()
         {
 
-            var listado = irollements.UnionDeTablas();
+            var listado = irollements.ListOfEnrollment();
 
             var combinacionArreglos = (from union in listado
                                        select new
@@ -60,17 +62,27 @@ namespace Escuela.Controllers
 /***************************************************************************************************************************************************/
         public IActionResult InnerJ()
         {
-            var listado = irollements.UnionDeTablas();
+            var listado = irollements.ListOfEnrollment();
 
             return View(listado);
         }
 
 /***************************************************************************************************************************************************/
+
+        public IActionResult getinformationcbb( Enrollment e)
+        {
+            return View("ComboBox");
+        }
+
+
         public IActionResult ComboBox()
         {
 
-            var informationOftheCombo = icourse.ListarCursos();
+            var informationOftheCombo = icourse.ListOfCourse();
+            var informationOftheComboforStudent = istudent.ListOfStudent();
+
             List<SelectListItem> list = new List<SelectListItem>();
+            List<SelectListItem> listStudent = new List<SelectListItem>();
 
             foreach (var  iterarInfo in informationOftheCombo)
             {
@@ -79,13 +91,21 @@ namespace Escuela.Controllers
                     {
                         Text = iterarInfo.Title,
                         Value = Convert.ToString(iterarInfo.CouserId)
-                    }
+                    });
 
+                ViewBag.estadolistcourse = list;
+            }
 
+            foreach (var iterarInfo in informationOftheComboforStudent)
+            {
+                listStudent.Add(
+                    new SelectListItem
+                    {
+                        Text = iterarInfo.FirstMiName,
+                        Value = Convert.ToString(iterarInfo.StudentId)
+                    });
 
-                    );
-
-                ViewBag.estado = list;
+                ViewBag.estadoliststudent = listStudent;
             }
 
             return View();
@@ -103,7 +123,7 @@ namespace Escuela.Controllers
             course.Title = titulo;
             course.Credits = creditos;
 
-            icourse.Insertar(course);
+            icourse.Insert(course);
 
 
 
@@ -112,11 +132,17 @@ namespace Escuela.Controllers
 /*****************************************************************************************************************************************************/
         public IActionResult GetAll()
         {
-            var FormatoJson = icourse.ListarCursos();
+            var FormatoJson = icourse.ListOfCourse();
 
             return Json(new { data = FormatoJson });
         }
 /***************************************************************************************************************************************************/
+        
+        public IActionResult Parcial()
+        {
+            return View();
+        }
+        
         public IActionResult Privacy()
         {
             return View();

@@ -1,0 +1,47 @@
+﻿@model List<Escuela.Dominio.Course>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center">Available Courses</h1>
+<br />
+<div class="text-center">
+    <table class="table table-dark table-hover">
+        <thead>
+
+        @*<th>
+            CoursId
+        </th>*@
+        <th>
+            Title
+        </th>
+        <th>
+            Credits
+        </th>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>@Html.ActionLink("Insert", "DataCourses", new { CouserId = 0 }, new { @class = "btn btn-primary" })</td>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    @*<td>@item.CouserId</td>*@
+                    <td>@item.Title</td>
+                    <td>@item.Credits</td>
+
+                    <td>
+                        @Html.ActionLink("Update", "DataCourses", new { CouserId = item.CouserId, Title = item.Title, Credits = item.Credits, }, new { @class = "btn btn-success" })
+
+                        @Html.ActionLink("Delete", "LogicalDelet", new { CouserId = item.CouserId }, new { @class = "btn btn-danger" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

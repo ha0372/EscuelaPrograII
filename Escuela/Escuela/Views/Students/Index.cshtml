@@ -1,0 +1,59 @@
+﻿@model List<Escuela.Dominio.Students>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h1 class="text-center">Enrolled Students</h1>
+<br />
+<div class="text-center">
+    <table class="table table-success table-striped">
+        <thead>
+        @*<th>
+            StudentId
+        </th>*@
+        <th>
+            LastName
+        </th>
+        <th>
+            FirstMiName
+        </th>
+        <th>
+            EnrollmentsDate
+        </th>
+        @*<th>
+            State
+        </th>*@
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Html.ActionLink("Insert", "DataEstudents", new { StudentId = 0, EnrollmentsDate = DateTime.Now }, new { @class = "btn btn-primary" })</td>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    @*<td>@item.StudentId</td>*@
+                    <td>@item.LastName</td>
+                    <td>@item.FirstMiName</td>
+                    <td>@item.EnrollmentsDate</td>
+                    @*<td>@item.stateStudent</td>*@
+
+                    <td>
+                        @Html.ActionLink("Update", "DataEstudents", new
+                        {
+                            StudentId = item.StudentId,
+                                                                          LastName = item.LastName,
+                                                                          FirstMiName = item.FirstMiName,
+                                                                          EnrollmentsDate = item.EnrollmentsDate
+                        }, new { @class = "btn btn-success" })
+
+                        @Html.ActionLink("Delete", "LogicalDelet", new { StudentId = item.StudentId }, new { @class = "btn btn-danger" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

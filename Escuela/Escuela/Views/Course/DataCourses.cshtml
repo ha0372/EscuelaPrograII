@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "DataCourse";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center">Course Data</h1>
+
+@using (Html.BeginForm("Succes", "Course", FormMethod.Post))
+{
+
+    <label for="Title">Course Title</label>
+    <br>
+    <input type="text" name="Title" value="@ViewBag.titulo" required>
+    <br>
+    <label for="Credits"> Credits </label>
+    <br>
+    <input type="number" name="Credits" value="@ViewBag.credit" required>
+    <br>
+    @*<label for="CouserId">ID</label>
+    <br />*@
+    <input type="hidden" name="CouserId" value="@ViewBag.id" />
+    <br>
+    <br />
+    <input type="submit" class="btn btn-success" value="SAVE" />
+
+
+}

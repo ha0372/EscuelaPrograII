@@ -10,38 +10,40 @@ namespace Escuela.Repositorio
 {
     public class CourseRepositore : ICourse
     {
-        private ApplicationDbContext app;
+        private ApplicationDbContext bd;
 
-        public CourseRepositore(ApplicationDbContext app)
+        public CourseRepositore(ApplicationDbContext bd)
         {
-            this.app = app;
+            this.bd = bd;
         }
-        public void Buscar(Course c)
-        {
-            app.Courses.Find(c);
-        }
+        //public void Buscar(Course c)
+        //{
+        //    app.Courses.Find(c);
+        //}
 
-        public void Delete(Course c)
-        {
-            app.Courses.Remove(c);
-        }
+        //public void Delete(Course c)
+        //{
+        //    app.Courses.Remove(c);
+        //}
 
-        public void Insertar(Course c)
+        public void Insert(Course course)
         {
-            app.Add(c);
-            app.SaveChanges();
-        }
-
-
-        public void Update(Course c)
-        {
-            app.Update(c);
-            app.SaveChanges();
+            bd.Add(course);
+            bd.SaveChanges();
         }
 
-        public ICollection<Course> ListarCursos()
+
+        public void Update(Course course)
         {
-            return app.Courses.ToList();
+            bd.Update(course);
+            bd.SaveChanges();
+        }
+
+        public List<Course> ListOfCourse()
+        {
+            var courseList = bd.Courses.Where(x => x.stateCourse == true).ToList();/*filtro borrado logico*/
+
+            return /*bd.Courses.ToList()*/courseList;
         }
 
 

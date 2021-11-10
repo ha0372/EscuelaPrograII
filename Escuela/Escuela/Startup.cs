@@ -32,6 +32,7 @@ namespace Escuela
             services.AddDbContext<ApplicationDbContext>(optios => optios.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddTransient<ICourse, CourseRepositore>();
             services.AddTransient<IRollements, EnrollemntRepository>();
+            services.AddTransient<IStudent, StudentRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,7 +59,7 @@ namespace Escuela
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Parcial}/{id?}");
             });
         }
     }

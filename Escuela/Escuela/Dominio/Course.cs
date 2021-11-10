@@ -17,6 +17,8 @@ namespace Escuela.Dominio
 
         public int Credits { get; set; }
 
+        public bool stateCourse { get; set; }
+
         public ICollection<Enrollment> Enrollments { get; set; }
     }
 }

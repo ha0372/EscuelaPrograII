@@ -9,14 +9,14 @@ namespace Escuela.Servicio
     public interface ICourse
     {
 
-        void Insertar(Course c);
-
-        void Delete(Course c);
+        void Insert(Course c);
 
         void Update(Course c);
-        //List<Course> ListarCursos();
 
-        ICollection<Course> ListarCursos();
+        List<Course> ListOfCourse();
 
     }
 }
+
+//List<Course> ListarCursos();
+//void Delete(Course c);
